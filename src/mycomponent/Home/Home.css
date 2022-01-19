@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Poppins&display=swap');
+
+.home-1{
+    background-image: url('./home-banner.jpg')  ;
+    background-repeat: no-repeat;
+    background-position: right  ;
+    background-size: cover;
+    height: 500px;
+}
+.overly h1{
+    font-size: 48px !important;
+    font-weight: 600;
+    letter-spacing: -1px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding-top: 80px;
+}
+.overly h2{
+    font-weight: 500;
+    font-size: 32px;
+    color: #fff;
+    margin: auto;
+    text-align: center;
+    padding-top: 30px;
+}
+.buttn{
+    background-color:  #458d00 !important;
+    font-size: 20px;
+    border: none;
+    border-radius: 50px !important;
+    margin: 80px;
+    font-weight: 600 !important;
+    margin-left: 550px;
+}
+.slider-1{
+    margin-top: 80px;
+}
+.slider-1 h2{
+    font-size: 40px;
+    font-weight: 600;
+    font-family:'Poppins', sans-serif ;
+}
+.card-badge{
+    padding: 9px 10px !important;
+    position: relative;
+}
+.img-box{
+    margin-top: 50px;
+}
+.img-box img{
+    height: 65px;
+    padding: 10px;
+    margin-top: 20px;
+}
+.img-box h2{
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 1.24;
+    border-bottom: 3px solid #ffc107;
+}
+.img-box p{
+    font-size: 20px ;
+    font-weight: 500;
+}

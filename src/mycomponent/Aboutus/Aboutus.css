@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Oswald&family=Poppins&display=swap');
+.story{
+    color: black;
+    background-image: url(./reviews-banner-1024x468.jpg);
+    background-repeat: no-repeat;
+    background-position: right  ;
+    background-size: cover;
+    height: 500px;
+}
+.story h1{
+   font-size: 59px;
+   font-family: 'Lato', sans-serif;
+}
+.story-1{
+    padding-top: 200px;
+}
+.about-story{
+    margin-top: 80px;
+}
+.about-story h2{
+    font-size: 39px;
+    font-family: 'Lato', sans-serif;
+}
+.about-story p{
+    font-weight: 400;
+    font-family: 'Lato', sans-serif;
+}
+.about-trek{
+    background-image: url(./Pin-Bhaba-Pass-Trek-Ray-Mascarenhas-Sunset-at-Phutsirang-1-1.jpg);
+    height: 600px;
+    background-repeat: no-repeat;
+    background-position: right  ;
+    background-size: cover;
+    margin-top: 50px;
+}

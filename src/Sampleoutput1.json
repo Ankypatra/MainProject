@@ -1,0 +1,53 @@
+{
+   "Product":[
+      { 
+       "title": "CHANDRASHILA TREK",
+        "height": "12,057 ft",
+        "duration":"6 days",
+        "Pickuppoint":" Dehradun",
+        "type":"Easy-Moderate",
+        "urltoimg":"https://images.thrillophilia.com/image/upload/s--rJFYKcTS--/c_fill,h_775,q_auto,w_1600/f_auto,fl_strip_profile/v1/images/photos/000/022/636/original/1513419766_chandra.jpg.jpg?1513419760"
+        },
+        { 
+        "title": "ALI BEDNI BUGYAL TREK",
+        "height": "11686 ft",
+        "duration":"6 days",
+        "Pickuppoint":"Rishikesh",
+        "type":"Moderate",
+        "urltoimg":"https://www.onhisowntrip.com/wp-content/uploads/2020/07/1-9-1080x540.jpg"
+        },
+        { 
+        "title": "SANDAKPHU PHALUT",
+        "height": "11,950 ft",
+        "duration":"7 days",
+        "Pickuppoint":"Bagdogra Airport",
+        "type":"Easy-Moderate",
+        "urltoimg":"https://www.indiahikes.com/wp-content/uploads/2016/05/Sandakphu-Indiahikes3-1-1.jpg?x23863"
+        },
+        { 
+        "title": "NAG TIBBA WEEKEND TREK",
+        "height": "9,914 ft",
+        "duration":"2 days",
+        "Pickuppoint":" Dehradun",
+        "type":"Easy",
+        "urltoimg":"https://www.tourmyindia.com/treks/wp-content/uploads/2020/08/nag-tibba-trek-f.jpg"
+         },
+         { 
+        "title": "KUARI PASS TREK",
+        "height": "12,516 ft",
+        "duration":"6 days",
+        "Pickuppoint":"Rishikesh",
+        "type":"Easy-Moderate",
+        "urltoimg":"https://www.himalayanhikers.in/wp-content/uploads/2019/10/kuari-pass-1.jpg"
+         } ,
+         { 
+        "title": "CHIRBATIYA WEEKEND TREK",
+        "height": "8402 ft",
+        "duration":"2 days",
+        "Pickuppoint":"Dehradun",
+        "type":"Easy-Moderate",
+        "urltoimg":"https://indiahikes.com/wp-content/uploads/2019/08/Gidara-Bugyal-Niteish-Indiahikes-25.jpg"
+              }       
+
+   ] 
+}

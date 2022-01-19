@@ -1,0 +1,17 @@
+.form-1{
+    border: 1px solid #333333;
+    width: 50%;
+    height: 500px;
+    box-sizing: border-box;
+    margin-left: 330px;
+    margin-top: 50px;
+    
+}
+.form-2{
+    width: 55%;
+    margin-left: 150px;
+}
+
+.form-3{
+    margin-left: 300px;
+}
