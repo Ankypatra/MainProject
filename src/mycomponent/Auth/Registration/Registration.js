@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom'
 function Registration() {
      const navigate=useNavigate()
     const validateEmail=RegExp('^([a-z0-9.-]+)@([a-z]{5,12}).([a-z.]{2,10})$')
-    const validatePassword=RegExp('^[a-zA-Z]\w{3,14}$')
+    // const validatePassword=RegExp('^[a-zA-Z]\w{3,14}$')
     
     const [useRegistration, setuseRegistration] = useState({isError:{
         fname:"",
@@ -30,21 +30,25 @@ function Registration() {
         case 'fname':
             isErr.fname=value.length<3 ? "This field is reqiured" : ""
             break;
+
         case 'lname':
             isErr.lname=value.length<3 ? "This field is reqiured" : ""
             break;
+
         case 'email':
             isErr.email=validateEmail.test(value) ? "" : "this field is required "
             break;
+
         case 'cemail':
             isErr.cemail=validateEmail.test(value) ? "" : "this field is required "
             break; 
-        case 'password':
-            isErr.password=validatePassword.test(value) ? "" : "this field is required "
-            break;
-        case 'cpassword':
-            isErr.cpassword=validatePassword.test(value) ? "" : "this field is required "  
-            break;        
+            
+        // case 'password':
+        //     isErr.password=validatePassword.test(value) ? "" : "this field is required "
+        //     break;
+        // case 'cpassword':
+        //     isErr.cpassword=validatePassword.test(value) ? "" : "this field is required "  
+        //     break;        
         default:
             break;
     }
@@ -60,7 +64,7 @@ function Registration() {
        password:useRegistration.password
     }
     console.log("user",user);
-    axios.post("https://project-node-1.herokuapp.com/postUserData",user)
+    axios.post("https://nodeprojectapi.herokuapp.com/register",user)
        .then(res=>{
          console.log("Axios response",res);
          navigate('/Login_Page')

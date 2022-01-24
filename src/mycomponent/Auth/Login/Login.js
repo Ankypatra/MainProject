@@ -1,26 +1,25 @@
 import React from 'react'
 import ReactPlayer from "react-player";
 import { useFormik } from 'formik';
-import { Form, Button } from 'react-bootstrap'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom'
 import './Login.css'
 
-const validPage=()=>{
+const validPage=(loginvalue)=>{
 const error ={};
 const RegExp1=/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/
 const RegExp2=/^[a-zA-Z]\w{3,14}$/
-if(!validPage.email){
+if(!loginvalue.email){
     error.email="Please enter your Email Id"
 }
-else if(!RegExp1.test(validPage.email)){
+else if(!RegExp1.test(loginvalue.email)){
 error.email="Enter your valid Email"
 }
 
-if (!validPage.password) {
+if (!loginvalue.password) {
     error.password="Enter Your Password"
 }
- else if(!RegExp2.test(validPage.password)) {
+ else if(!RegExp2.test(loginvalue.password)) {
     error.password="Need a Strong Password"
 }
 console.log("return error",error);
@@ -37,10 +36,10 @@ const Login = () => {
         validate:validPage,
         onSubmit: (values) => {
             console.log(values);
-            axios.post("https://project-node-1.herokuapp.com/postLoginData",values)
+            axios.post("https://nodeprojectapi.herokuapp.com/login",values)
             .then(res=>{
               console.log("Axios response",res);
-              window.localStorage.setItem("token",res.data.token)
+              window.localStorage.setItem("token",res.data.data.token)
               navigate('/Upcomingtrek_Page')
             })
             .catch(err=>{
@@ -60,24 +59,26 @@ const Login = () => {
             <div className=" level-2 "  >
                 <div className='text-center'>
                     <h3>NEXTHIKES TREKKER</h3>
-                    <p>Login with your email id if you have already trekked with Nexthikes</p>
+                    <p style={{fontweight:700}}>Login with your email id if you have already trekked with Nexthikes</p>
                 </div>
-                <Form onSubmit={formik.handleSubmit}>
-                    <Form.Group className="mb-3 mx-3 my-2">
-                        <Form.Label>Email id</Form.Label>
-                        <Form.Control type="email" name='email' placeholder="Enter email id" autoComplete='off' value={formik.values.email}
+                <form onSubmit={formik.handleSubmit}>
+                    <div className="mb-3 mx-3 my-2">
+                        <label htmlFor="exampleInputEmail1" className="form-label">Email id</label>
+                        <input className="form-control"  type="email" name='email' placeholder="Enter email id" autoComplete='off' value={formik.values.email}
                             onChange={formik.handleChange} onBlur={ formik.handleBlur} />
-                    </Form.Group>
+                             {formik.touched.email && formik.errors.email ?(<span style={{color:'red'}}>{formik.errors.email}</span>):null }
+                    </div>
 
-                    <Form.Group className="mb-3 mx-3">
-                        <Form.Label>Password</Form.Label>
-                        <Form.Control type="text" name='password' placeholder="Enter Name" autoComplete='off' value={formik.values.password }
+                    <div className="mb-3 mx-3">
+                        <label htmlFor="exampleInputEmail1" className="form-label">Password</label>
+                        <input className="form-control"  type="password" name='password' placeholder="Enter Name" autoComplete='off' value={formik.values.password }
                             onChange={formik.handleChange} onBlur={formik.handleBlur} />
-                    </Form.Group>
-                    <Button variant="warning" type="submit" className='mx-3'>
+                             {formik.touched.password && formik.errors.password ?(<span style={{color:'red'}}>{formik.errors.password}</span>):null }
+                    </div>
+                    <button  type="submit" className='mx-3 btn-warning btn'>
                         Login
-                    </Button>
-                </Form>
+                    </button>
+                </form>
             </div>
 
         </div>

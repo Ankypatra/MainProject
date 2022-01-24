@@ -13,7 +13,7 @@
   right: 0px;
   width: 15rem;
   height: 4rem;
-  background-color: rgba(146, 146, 146, 0.5) !important;
+  /* background-color: rgba(146, 146, 146, 0.5) !important; */
   color: white;
   padding-left: 20px;
   padding-right: 20px;
@@ -24,7 +24,7 @@
 }
 .card-style img {
   transform: scale(1.3);
-  transition: all 0.35s ease-out;
+  transition: all 0.2s ease-out;
 }
 .card-style:hover img {
   transform: scale(1.1) translateY(-20px);
@@ -37,16 +37,19 @@
   bottom: 0;
   text-align: center;
   font-size: 18px;
-}
-.description h3 {
-  transform: translateY(30px);
-  opacity: 0;
-}
-.description p {
-  transform: translateY(30px);
-  opacity: 0;
+  padding: 15px;
 }
 .description button {
   transform: translateY(30px);
   opacity: 0;
+  color: #fff;
+  margin-left: 47px !important;
+  margin-bottom:100px ;
+}
+
+
+.card:hover .description button {
+  opacity: 1;
+  transform: translateY(0px)
+  
 }

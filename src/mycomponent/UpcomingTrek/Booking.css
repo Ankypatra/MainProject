@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Lato&family=Oswald&family=Poppins&display=swap');
+.form-1{
+    border: 1px solid grey;
+    height: 650px !important;
+}
+.form-1-text{
+    font-family: 'Kaushan Script', cursive;
+}
+.form-1-label {
+    font-weight: 700 !important;
+}
